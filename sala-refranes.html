@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Sala: Refranes Argentinos | Museo Virtual</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#201d12",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .gold-border {
+            border: 1px solid #d4af35;
+            box-shadow: 0 0 15px rgba(212, 175, 53, 0.2);
+        }
+
+        .artwork-img {
+            filter: brightness(0.7) contrast(1.1);
+            transition: all 0.6s ease;
+        }
+
+        .artwork-item:hover .artwork-img {
+            filter: brightness(1);
+            transform: scale(1.02);
+        }
+    </style>
+</head>
+
+<body class="bg-background-dark font-display text-slate-100 min-h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 border-b border-primary/20 bg-background-dark/95 backdrop-blur-md px-4 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="museo.html" class="flex items-center gap-2 group">
+                <span
+                    class="material-symbols-outlined text-primary text-2xl group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                <span class="font-serif text-lg font-bold tracking-widest text-primary uppercase">Volver al Museo</span>
+            </a>
+            <div class="hidden md:block">
+                <h1 class="text-xs uppercase tracking-[0.4em] text-primary/60 font-bold">Sala de Exposición Temporal
+                </h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="py-24 px-8 text-center max-w-4xl mx-auto">
+        <h1 class="font-serif text-5xl md:text-7xl font-black text-white leading-tight mb-8">
+            Refranes <span class="text-primary italic">Argentinos</span>
+        </h1>
+        <div class="h-px w-32 bg-primary mx-auto mb-8 opacity-50"></div>
+        <p class="text-xl text-slate-400 font-light leading-relaxed italic">
+            "La sabiduría popular capturada a través de la lente de la Inteligencia Artificial."
+        </p>
+    </header>
+
+    <!-- Audio Experience -->
+    <div class="max-w-xl mx-auto mb-16 px-6">
+        <div class="bg-primary/5 gold-border rounded-2xl p-6 flex flex-col items-center gap-4">
+            <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary animate-pulse">volume_up</span>
+                <span class="text-xs uppercase tracking-[0.3em] font-bold text-primary/80">Bienvenidos a la sala</span>
+            </div>
+            <audio controls class="w-full custom-audio">
+                <source
+                    src="assets/ElevenLabs_2026-02-23T18_33_46_Hombre argentino narrador_gen_sp100_s50_sb75_se0_b_m2.mp3"
+                    type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <p class="text-[10px] text-slate-500 italic uppercase tracking-wider">Click para reproducir audio</p>
+        </div>
+    </div>
+
+    <!-- Vertical Gallery -->
+    <main class="max-w-5xl mx-auto px-6 py-12 space-y-48 pb-60 w-full">
+
+        <!-- Artwork 1 -->
+        <section class="artwork-item flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-24">
+            <div class="gold-border p-2 bg-background-dark/50 rounded-lg w-full md:w-3/5">
+                <img alt="Cocodrilo que se duerme, es cartera"
+                    class="artwork-img w-full h-auto rounded object-cover aspect-[3/4]"
+                    src="assets/images/refranes/artwork1.jpg" />
+            </div>
+            <div class="md:pt-12 text-center md:text-left flex-1">
+                <h2 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight">
+                    Cocodrilo que<br>se duerme,<br><span class="text-primary italic text-3xl md:text-5xl">es
+                        cartera</span>
+                </h2>
+                <div class="w-12 h-px bg-primary/40 mt-8 mx-auto md:mx-0"></div>
+            </div>
+        </section>
+
+        <!-- Artwork 2 -->
+        <section class="artwork-item flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-24">
+            <div class="gold-border p-2 bg-background-dark/50 rounded-lg w-full md:w-3/5">
+                <img alt="Si te gusta el durazno, bancate la pelusa"
+                    class="artwork-img w-full h-auto rounded object-cover aspect-[3/4]"
+                    src="assets/images/refranes/artwork2.jpg" />
+            </div>
+            <div class="md:pt-12 text-center md:text-left flex-1">
+                <h2 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight">
+                    Si te gusta el<br>durazno,<br><span class="text-primary italic text-3xl md:text-5xl">bancate la
+                        pelusa</span>
+                </h2>
+                <div class="w-12 h-px bg-primary/40 mt-8 mx-auto md:mx-0"></div>
+            </div>
+        </section>
+
+        <!-- Artwork 3 -->
+        <section class="artwork-item flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-24">
+            <div class="gold-border p-2 bg-background-dark/50 rounded-lg w-full md:w-3/5">
+                <img alt="A caballo regalado no se le miran los dientes"
+                    class="artwork-img w-full h-auto rounded object-cover aspect-[3/4]"
+                    src="assets/images/refranes/artwork3.jpg" />
+            </div>
+            <div class="md:pt-12 text-center md:text-left flex-1">
+                <h2 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight">
+                    A caballo regalado<br>no se le miran<br><span class="text-primary italic text-3xl md:text-5xl">los
+                        dientes</span>
+                </h2>
+                <div class="w-12 h-px bg-primary/40 mt-8 mx-auto md:mx-0"></div>
+            </div>
+        </section>
+
+        <!-- Artwork 4 -->
+        <section class="artwork-item flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-24">
+            <div class="gold-border p-2 bg-background-dark/50 rounded-lg w-full md:w-3/5">
+                <img alt="Siempre que llovió, paró" class="artwork-img w-full h-auto rounded object-cover aspect-[3/4]"
+                    src="assets/images/refranes/artwork4.jpg" />
+            </div>
+            <div class="md:pt-12 text-center md:text-left flex-1">
+                <h2 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight">
+                    Siempre que<br>llovió,<br><span class="text-primary italic text-3xl md:text-5xl">paró</span>
+                </h2>
+                <div class="w-12 h-px bg-primary/40 mt-8 mx-auto md:mx-0"></div>
+            </div>
+        </section>
+
+        <!-- Artwork 5 -->
+        <section class="artwork-item flex flex-col md:flex-row items-center md:items-start gap-12 md:gap-24">
+            <div class="gold-border p-2 bg-background-dark/50 rounded-lg w-full md:w-3/5">
+                <img alt="Aunque la mona se vista de seda, mona se queda"
+                    class="artwork-img w-full h-auto rounded object-cover aspect-[3/4]"
+                    src="assets/images/refranes/artwork5.jpg" />
+            </div>
+            <div class="md:pt-12 text-center md:text-left flex-1">
+                <h2 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight">
+                    Aunque la mona<br>se vista de seda,<br><span class="text-primary italic text-3xl md:text-5xl">mona
+                        se queda</span>
+                </h2>
+                <div class="w-12 h-px bg-primary/40 mt-8 mx-auto md:mx-0"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Recommended Artworks Exploration Section -->
+    <section class="max-w-7xl mx-auto py-24 px-4 border-t border-primary/10">
+        <div class="text-center mb-16">
+            <span class="text-primary uppercase tracking-[0.4em] text-xs font-bold">Inspiración</span>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mt-3 text-white">Seguir Explorando</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Rec 1: Fotografía -->
+            <a href="#" class="group block space-y-4">
+                <div class="aspect-[4/5] overflow-hidden rounded-2xl gold-border bg-background-dark/50 p-2">
+                    <img alt="Fotografía arquitectónica"
+                        class="w-full h-full object-cover rounded-xl transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                        src="assets/images/recommendations/photography.png" />
+                </div>
+                <div class="px-2">
+                    <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Fotografía</span>
+                    <h3 class="font-serif text-xl font-bold text-white group-hover:text-primary transition-colors mt-1">
+                        Geometría Urbana</h3>
+                </div>
+            </a>
+
+            <!-- Rec 2: Pintura al Óleo -->
+            <a href="#" class="group block space-y-4">
+                <div class="aspect-[4/5] overflow-hidden rounded-2xl gold-border bg-background-dark/50 p-2">
+                    <img alt="Pintura al óleo costa"
+                        class="w-full h-full object-cover rounded-xl transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                        src="assets/images/recommendations/oil.png" />
+                </div>
+                <div class="px-2">
+                    <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Pintura al Óleo</span>
+                    <h3 class="font-serif text-xl font-bold text-white group-hover:text-primary transition-colors mt-1">
+                        Crepúsculo en la Costa</h3>
+                </div>
+            </a>
+
+            <!-- Rec 3: Fotografía Analógica -->
+            <a href="#" class="group block space-y-4">
+                <div class="aspect-[4/5] overflow-hidden rounded-2xl gold-border bg-background-dark/50 p-2">
+                    <img alt="Fotografía analógica París"
+                        class="w-full h-full object-cover rounded-xl transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                        src="assets/images/recommendations/analog.png" />
+                </div>
+                <div class="px-2">
+                    <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Fotografía
+                        Analógica</span>
+                    <h3 class="font-serif text-xl font-bold text-white group-hover:text-primary transition-colors mt-1">
+                        Ecos del Marais</h3>
+                </div>
+            </a>
+
+            <!-- Rec 4: IA -->
+            <a href="#" class="group block space-y-4">
+                <div class="aspect-[4/5] overflow-hidden rounded-2xl gold-border bg-background-dark/50 p-2">
+                    <img alt="Arte digital IA"
+                        class="w-full h-full object-cover rounded-xl transition-all duration-700 group-hover:scale-110 group-hover:brightness-110"
+                        src="assets/images/recommendations/ai.png" />
+                </div>
+                <div class="px-2">
+                    <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Sintética (IA)</span>
+                    <h3 class="font-serif text-xl font-bold text-white group-hover:text-primary transition-colors mt-1">
+                        Mente Infinita</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <footer class="mt-auto border-t border-primary/20 bg-background-dark py-24 px-8 text-center">
+        <div class="max-w-xs mx-auto text-primary/40 text-[10px] uppercase tracking-[0.4em] space-y-4 font-bold">
+            <p>MUSEO VIRTUAL ARGENTINO</p>
+            <p>&copy; 2026. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

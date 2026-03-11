@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Nuestros Artistas | Museo Virtual</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#201d12",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .gold-border {
+            border: 1px solid #d4af35;
+            box-shadow: 0 0 15px rgba(212, 175, 53, 0.2);
+        }
+        .artist-card {
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .artist-card:hover {
+            transform: translateY(-10px);
+        }
+        .work-preview {
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            transition: all 0.7s ease;
+        }
+        .artist-card:hover .work-preview {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display text-slate-100 min-h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 border-b border-primary/20 bg-background-dark/95 backdrop-blur-md px-4 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <a href="museo.html" class="flex items-center gap-2 group">
+                <span class="material-symbols-outlined text-primary text-2xl group-hover:-translate-x-1 transition-transform">arrow_back</span>
+                <span class="font-serif text-lg font-bold tracking-widest text-primary uppercase">Volver al Museo</span>
+            </a>
+            <div class="hidden md:block">
+                <h1 class="text-xs uppercase tracking-[0.4em] text-primary/60 font-bold">Comunidad de Creadores</h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="py-24 px-8 text-center max-w-4xl mx-auto">
+        <span class="text-primary uppercase tracking-[0.5em] text-xs font-bold mb-4 block animate-pulse">Los Maestros</span>
+        <h1 class="font-serif text-5xl md:text-7xl font-black text-white leading-tight mb-8">
+            Nuestros <span class="text-primary italic">Artistas</span>
+        </h1>
+        <p class="text-xl text-slate-400 font-light leading-relaxed max-w-2xl mx-auto">
+            Conoce a las mentes brillantes que dan vida a nuestras galerías. Cada artista aporta una visión única al tejido cultural del museo.
+        </p>
+    </header>
+
+    <!-- Artists Grid -->
+    <main class="max-w-7xl mx-auto px-6 py-12 mb-24">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            
+            <!-- Artist 1: Elena Valerdi -->
+            <div class="artist-card bg-primary/5 rounded-3xl p-8 border border-primary/10 flex flex-col items-center text-center space-y-6">
+                <div class="relative w-48 h-48">
+                    <div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full"></div>
+                    <img alt="Elena Valerdi" class="w-full h-full object-cover rounded-full border-2 border-primary relative z-10" src="assets/images/artists/elena_portrait.png" />
+                </div>
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-white mb-2">Elena Valerdi</h2>
+                    <span class="text-primary text-sm uppercase tracking-widest font-bold">Pintura Abstracta</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Maestra del color y la textura, sus lienzos exploran la dualidad entre el caos y la armonía.
+                </p>
+                <div class="w-full space-y-3 pt-4">
+                    <span class="text-[10px] uppercase text-primary/60 font-bold block mb-2">Obra Destacada: "La Persistencia"</span>
+                    <div class="gold-border rounded-xl overflow-hidden work-preview">
+                        <img alt="La Persistencia" class="w-full h-40 object-cover" src="assets/images/artists/elena_work.png" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist 2: Marco Rosetti -->
+            <div class="artist-card bg-primary/5 rounded-3xl p-8 border border-primary/10 flex flex-col items-center text-center space-y-6">
+                <div class="relative w-48 h-48">
+                    <div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full"></div>
+                    <img alt="Marco Rosetti" class="w-full h-full object-cover rounded-full border-2 border-primary relative z-10" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop" />
+                </div>
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-white mb-2">Marco Rosetti</h2>
+                    <span class="text-primary text-sm uppercase tracking-widest font-bold">Escultura Moderna</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Desafía la gravedad con estructuras de mármol y acero que parecen flotar en el espacio.
+                </p>
+                <div class="w-full space-y-3 pt-4">
+                    <span class="text-[10px] uppercase text-primary/60 font-bold block mb-2">Obra Destacada: "El Grito Moderno"</span>
+                    <div class="gold-border rounded-xl overflow-hidden work-preview">
+                        <img alt="El Grito Moderno" class="w-full h-40 object-cover" src="https://images.unsplash.com/photo-1554188248-986adbb73be4?q=80&w=1000&auto=format&fit=crop" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist 3: Sofia Ganz -->
+            <div class="artist-card bg-primary/5 rounded-3xl p-8 border border-primary/10 flex flex-col items-center text-center space-y-6">
+                <div class="relative w-48 h-48">
+                    <div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full"></div>
+                    <img alt="Sofia Ganz" class="w-full h-full object-cover rounded-full border-2 border-primary relative z-10" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1000&auto=format&fit=crop" />
+                </div>
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-white mb-2">Sofia Ganz</h2>
+                    <span class="text-primary text-sm uppercase tracking-widest font-bold">Arte Fractal Digital</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Utiliza algoritmos para crear paisajes matemáticos de una belleza hipnótica y futurista.
+                </p>
+                <div class="w-full space-y-3 pt-4">
+                    <span class="text-[10px] uppercase text-primary/60 font-bold block mb-2">Obra Destacada: "Abstracción Áurea"</span>
+                    <div class="gold-border rounded-xl overflow-hidden work-preview">
+                        <img alt="Abstracción Áurea" class="w-full h-40 object-cover" src="https://images.unsplash.com/photo-1633167606207-d840b5070fc2?q=80&w=1000&auto=format&fit=crop" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist 4: Julián Mármol -->
+            <div class="artist-card bg-primary/5 rounded-3xl p-8 border border-primary/10 flex flex-col items-center text-center space-y-6">
+                <div class="relative w-48 h-48">
+                    <div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full"></div>
+                    <img alt="Julián Mármol" class="w-full h-full object-cover rounded-full border-2 border-primary relative z-10" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop" />
+                </div>
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-white mb-2">Julián Mármol</h2>
+                    <span class="text-primary text-sm uppercase tracking-widest font-bold">Fotografía Minimalista</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Captura la esencia de la arquitectura a través de sombras geométricas y contrastes puros.
+                </p>
+                <div class="w-full space-y-3 pt-4">
+                    <span class="text-[10px] uppercase text-primary/60 font-bold block mb-2">Obra Destacada: "Silencio Urbano"</span>
+                    <div class="gold-border rounded-xl overflow-hidden work-preview">
+                        <img alt="Silencio Urbano" class="w-full h-40 object-cover" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1000&auto=format&fit=crop" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist 5: Beatriz Luna -->
+            <div class="artist-card bg-primary/5 rounded-3xl p-8 border border-primary/10 flex flex-col items-center text-center space-y-6">
+                <div class="relative w-48 h-48">
+                    <div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full"></div>
+                    <img alt="Beatriz Luna" class="w-full h-full object-cover rounded-full border-2 border-primary relative z-10" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1000&auto=format&fit=crop" />
+                </div>
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-white mb-2">Beatriz Luna</h2>
+                    <span class="text-primary text-sm uppercase tracking-widest font-bold">Fotografía Analógica</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Exploradora de la nostalgia, sus fotos detienen el tiempo en las calles y rostros del mundo.
+                </p>
+                <div class="w-full space-y-3 pt-4">
+                    <span class="text-[10px] uppercase text-primary/60 font-bold block mb-2">Obra Destacada: "Ecos del Ayer"</span>
+                    <div class="gold-border rounded-xl overflow-hidden work-preview">
+                        <img alt="Ecos del Ayer" class="w-full h-40 object-cover" src="https://images.unsplash.com/photo-1526285110810-29330e33158e?q=80&w=1000&auto=format&fit=crop" />
+                    </div>
+                </div>
+            </div>
+
+            <!-- Artist 6: Santi Aura -->
+            <div class="artist-card bg-primary/5 rounded-3xl p-8 border border-primary/10 flex flex-col items-center text-center space-y-6">
+                <div class="relative w-48 h-48">
+                    <div class="absolute inset-0 bg-primary/20 blur-2xl rounded-full"></div>
+                    <img alt="Santi Aura" class="w-full h-full object-cover rounded-full border-2 border-primary relative z-10" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" />
+                </div>
+                <div>
+                    <h2 class="font-serif text-3xl font-bold text-white mb-2">Santi Aura</h2>
+                    <span class="text-primary text-sm uppercase tracking-widest font-bold">Arte Generativo (IA)</span>
+                </div>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Colabora con algoritmos para materializar mundos oníricos y realidades alternativas.
+                </p>
+                <div class="w-full space-y-3 pt-4">
+                    <span class="text-[10px] uppercase text-primary/60 font-bold block mb-2">Obra Destacada: "Mente Infinita"</span>
+                    <div class="gold-border rounded-xl overflow-hidden work-preview">
+                        <img alt="Mente Infinita" class="w-full h-40 object-cover" src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop" />
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="mt-24 text-center">
+            <a href="museo.html" class="inline-flex items-center gap-3 bg-primary text-background-dark px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:scale-105 transition-all shadow-[0_0_30px_rgba(212,175,53,0.3)]">
+                <span class="material-symbols-outlined">home</span>
+                Volver al Museo
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto border-t border-primary/20 bg-background-dark py-12 px-8 text-center">
+        <div class="max-w-xs mx-auto text-primary/40 text-[10px] uppercase tracking-[0.4em] space-y-4 font-bold">
+            <p>MUSEO VIRTUAL ARGENTINO</p>
+            <p>&copy; 2026. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

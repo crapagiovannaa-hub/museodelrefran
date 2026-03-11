@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#d4af35",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#201d12",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"],
+                        "serif": ["Playfair Display", "serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .gold-border {
+            border: 1px solid #d4af35;
+            box-shadow: 0 0 15px rgba(212, 175, 53, 0.2);
+        }
+
+        .hero-gradient {
+            background: linear-gradient(rgba(32, 29, 18, 0.6), rgba(32, 29, 18, 0.9)), url('https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+    <style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen flex flex-col">
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 border-b border-primary/20 bg-background-dark/95 backdrop-blur-md px-4 py-3">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+                <h1 class="font-serif text-xl font-bold tracking-widest text-primary uppercase">Museo Virtual</h1>
+            </div>
+            <div class="hidden md:flex gap-8 items-center">
+                <a class="text-primary font-medium hover:text-primary/80 transition-colors" href="#">Inicio</a>
+                <a class="hover:text-primary transition-colors" href="#">Obras</a>
+                <a class="hover:text-primary transition-colors" href="#">Exposiciones</a>
+                <a class="hover:text-primary transition-colors" href="artistas.html">Artistas</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="material-symbols-outlined hover:text-primary transition-colors">search</button>
+                <button
+                    class="bg-primary text-background-dark px-4 py-2 rounded-lg font-bold text-sm uppercase tracking-wider hover:bg-primary/90 transition-all">Ingresar</button>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="relative bg-background-dark py-12 md:py-24 px-4 flex flex-col items-center text-center overflow-hidden">
+        <!-- Video Container (Original Format) -->
+        <div class="w-full max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden shadow-2xl gold-border">
+            <video autoplay loop controls muted class="w-full h-auto block" poster="https://images.unsplash.com/photo-1549490349-8643362247b5?q=80&w=2000&auto=format&fit=crop">
+                <source src="assets/video de museo del refran.mp4" type="video/mp4">
+                Tu navegador no soporta video.
+            </video>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="max-w-4xl space-y-6">
+            <h1 class="font-serif text-5xl md:text-8xl font-black text-white leading-tight">
+                Museo <span class="text-primary italic">del Refrán</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-slate-400 font-light max-w-2xl mx-auto leading-relaxed">
+                Aquí encontrarás obras inspiradas en refranes argentinos, creadas con Inteligencia Artificial.
+                Esta exposición propone una reflexión sobre la argentinidad, la palabra y la imaginación como territorios de identidad.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center pt-8">
+                <button
+                    class="bg-primary text-background-dark px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-widest hover:scale-105 transition-transform shadow-lg shadow-primary/20">
+                    Entrar al Museo
+                </button>
+                <button
+                    class="border-2 border-primary text-primary px-10 py-4 rounded-lg font-bold text-lg uppercase tracking-widest hover:bg-primary/10 transition-colors">
+                    Registrarse
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Recommended Exhibition Section -->
+    <section class="bg-primary/5 border-y border-primary/20 py-24 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div>
+                    <span class="text-primary uppercase tracking-[0.3em] text-sm font-bold">Exposición Recomendada</span>
+                    <h2 class="font-serif text-5xl md:text-6xl font-bold mt-4 leading-tight text-white">Refranes <span class="text-primary italic">Argentinos</span></h2>
+                </div>
+                <p class="text-lg text-slate-300 leading-relaxed font-light">
+                    Una colección inmersiva de obras visuales inspiradas en la sabiduría popular y la picardía de los
+                    refranes más icónicos de la cultura argentina. Del pincel a la identidad colectiva.
+                </p>
+                <div class="flex gap-4">
+                    <a href="sala-refranes.html" class="bg-primary text-background-dark px-8 py-4 rounded-lg font-bold uppercase tracking-wider hover:shadow-[0_0_20px_rgba(212,175,53,0.4)] transition-all">
+                        Explorar exposición
+                    </a>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 gap-4">
+                <div class="space-y-4">
+                    <img alt="Cocodrilo que se duerme" class="rounded-xl gold-border w-full h-64 object-cover" src="assets/images/refranes/artwork1.jpg" />
+                    <img alt="Si te gusta el durazno" class="rounded-xl gold-border w-full h-48 object-cover" src="assets/images/refranes/artwork2.jpg" />
+                </div>
+                <div class="space-y-4 pt-8">
+                    <img alt="A caballo regalado" class="rounded-xl gold-border w-full h-48 object-cover" src="assets/images/refranes/artwork3.jpg" />
+                    <img alt="Siempre que llovió" class="rounded-xl gold-border w-full h-64 object-cover" src="assets/images/refranes/artwork4.jpg" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Artworks Section -->
+    <section class="max-w-7xl mx-auto py-20 px-4 w-full">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-4">
+            <div>
+                <span class="text-primary uppercase tracking-[0.3em] text-sm font-bold">Colección Curada</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold mt-2">Obras Destacadas</h2>
+            </div>
+            <a class="text-primary flex items-center gap-2 hover:underline" href="#">Ver galería completa <span
+                    class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Artwork Card 1 -->
+            <div class="group">
+                <div class="gold-border p-3 bg-background-dark/50 overflow-hidden rounded-xl">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img alt="Pintura abstracta colorida"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="Pintura al óleo abstracta con colores vibrantes y texturas"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7PHck0FllWlSndBPF0s7f9Y1vT3iMVVeEASokKNmApsdD1UcetyWOz5BNTzO3A9TvmWc6KZWWZWlnO5U6pIsBqVTz5MolnNNcK9temTMo15bhDei-H9ehA3k3Lu63R4T5VmzKGiLiumW_plUROvqWgOlhDXj_zMZtA1aNe58Cg_BmHMtmaKcOiCnwlNPdbQBmZiWLZQfWFeQAnUrZkvyZ7Dby9JzFSDzZnJdWTGfy3AtZ7eOQ55szt98c1TMTVCdIRsioReDKJXE" />
+                        <div
+                            class="absolute inset-0 bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button
+                                class="bg-primary text-background-dark px-6 py-2 rounded-lg font-bold uppercase text-sm">Ver
+                                obra</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <h3 class="font-serif text-2xl font-bold">La Persistencia</h3>
+                    <p class="text-primary/80 italic mt-1">Elena Valerdi</p>
+                </div>
+            </div>
+            <!-- Artwork Card 2 -->
+            <div class="group">
+                <div class="gold-border p-3 bg-background-dark/50 overflow-hidden rounded-xl">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img alt="Escultura moderna minimalista"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="Escultura vanguardista de mármol negro en sala iluminada"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuATID3RZuoewex4pU32oAkFOlrIqlOasqfZR82oNN5PZw3J1DFR97PXDiWxcxxAeA92jspVLmgzWAb8WsSXkD2t_QNRcp1icHFUIiaqBiEDSjNr_u04-vftjRUfglgeEYwLWpc5fXMFZdR36oWD_pPXWNg1wfXkCUzQTpMgojxAcaiJ44ljpm5dynDVCJBVKL01FGTPm5uhtWYDxzHemfzRaf_--5lGyEYWpCH1aqRsbEhCVyV_NHl4VHIfw1hUcarlerCJ_Bye9UY" />
+                        <div
+                            class="absolute inset-0 bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button
+                                class="bg-primary text-background-dark px-6 py-2 rounded-lg font-bold uppercase text-sm">Ver
+                                obra</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <h3 class="font-serif text-2xl font-bold">El Grito Moderno</h3>
+                    <p class="text-primary/80 italic mt-1">Marco Rosetti</p>
+                </div>
+            </div>
+            <!-- Artwork Card 3 -->
+            <div class="group">
+                <div class="gold-border p-3 bg-background-dark/50 overflow-hidden rounded-xl">
+                    <div class="aspect-[4/5] overflow-hidden relative">
+                        <img alt="Obra de arte digital futurista"
+                            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                            data-alt="Arte digital fractal con tonos dorados y oscuros"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6vzMdiF6jajBeRaB3ny4YuZyzO_X2CwsTrLhPN0MUEMaYL9ROfTGn3HW6bi7KR-knf84s2JQn0-681PzntpCWQfPmgzBleqJjdHqhbBVm8Bv_pLZmXb2TEcB5SY8BOKw_alURleFPOMiB0h2uJLkOgL5rwq-0ut4D8g0n8U66xfQj6v_pTZcVQolfTcA2sFY0h-Zojlcz-Hg8r0MfTmMZbtSkQfFw74d9lt2B5TCqHjFCfxdsOZNFKee4aHI2jEcK8O3nJAlMFr0" />
+                        <div
+                            class="absolute inset-0 bg-background-dark/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button
+                                class="bg-primary text-background-dark px-6 py-2 rounded-lg font-bold uppercase text-sm">Ver
+                                obra</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 text-center">
+                    <h3 class="font-serif text-2xl font-bold">Abstracción Áurea</h3>
+                    <p class="text-primary/80 italic mt-1">Sofia Ganz</p>
+                </div>
+            </div>
+        </div>
+    <!-- Call to Action Section -->
+    <section class="max-w-5xl mx-auto py-24 px-4 text-center">
+        <div class="bg-background-dark border-2 border-primary/30 p-12 rounded-3xl relative overflow-hidden group">
+            <div
+                class="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -mr-16 -mt-16 group-hover:bg-primary/20 transition-all">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 w-32 h-32 bg-primary/10 rounded-full blur-3xl -ml-16 -mb-16 group-hover:bg-primary/20 transition-all">
+            </div>
+            <span class="material-symbols-outlined text-primary text-6xl mb-6">palette</span>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mb-6">¿Eres artista?</h2>
+            <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
+                Únete a nuestra comunidad global y comparte tu visión con miles de visitantes. Tu obra merece un
+                pedestal digital de primer nivel.
+            </p>
+            <button
+                class="bg-primary text-background-dark px-12 py-5 rounded-lg font-black text-lg uppercase tracking-widest hover:scale-105 transition-transform">
+                Registrarse para subir obras
+            </button>
+        </div>
+    </section>
+
+    <!-- Recommended Artworks Exploration Section -->
+    <section class="max-w-7xl mx-auto py-24 px-4 border-t border-primary/10">
+        <div class="text-center mb-16">
+            <span class="text-primary uppercase tracking-[0.4em] text-xs font-bold">Inspiración</span>
+            <h2 class="font-serif text-4xl md:text-5xl font-bold mt-3">Seguir Explorando</h2>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Rec 1: Fotografía -->
+            <a href="#" class="group block space-y-4">
+                <div class="aspect-[4/5] overflow-hidden rounded-2xl gold-border bg-background-dark/50 p-2">
+                    <img alt="Fotografía arquitectónica" class="w-full h-full object-cover rounded-xl transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" src="assets/images/recommendations/photography.png" />
+                </div>
+                <div class="px-2">
+                    <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Fotografía</span>
+                    <h3 class="font-serif text-xl font-bold text-white group-hover:text-primary transition-colors mt-1">Geometría Urbana</h3>
+                </div>
+            </a>
+
+            <!-- Rec 2: Pintura al Óleo -->
+            <a href="#" class="group block space-y-4">
+                <div class="aspect-[4/5] overflow-hidden rounded-2xl gold-border bg-background-dark/50 p-2">
+                    <img alt="Pintura al óleo costa" class="w-full h-full object-cover rounded-xl transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" src="assets/images/recommendations/oil.png" />
+                </div>
+                <div class="px-2">
+                    <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Pintura al Óleo</span>
+                    <h3 class="font-serif text-xl font-bold text-white group-hover:text-primary transition-colors mt-1">Crepúsculo en la Costa</h3>
+                </div>
+            </a>
+
+            <!-- Rec 3: Fotografía Analógica -->
+            <a href="#" class="group block space-y-4">
+                <div class="aspect-[4/5] overflow-hidden rounded-2xl gold-border bg-background-dark/50 p-2">
+                    <img alt="Fotografía analógica París" class="w-full h-full object-cover rounded-xl transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" src="assets/images/recommendations/analog.png" />
+                </div>
+                <div class="px-2">
+                    <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Fotografía Analógica</span>
+                    <h3 class="font-serif text-xl font-bold text-white group-hover:text-primary transition-colors mt-1">Ecos del Marais</h3>
+                </div>
+            </a>
+
+            <!-- Rec 4: IA -->
+            <a href="#" class="group block space-y-4">
+                <div class="aspect-[4/5] overflow-hidden rounded-2xl gold-border bg-background-dark/50 p-2">
+                    <img alt="Arte digital IA" class="w-full h-full object-cover rounded-xl transition-all duration-700 group-hover:scale-110 group-hover:brightness-110" src="assets/images/recommendations/ai.png" />
+                </div>
+                <div class="px-2">
+                    <span class="text-[10px] uppercase tracking-widest text-primary font-bold">Sintética (IA)</span>
+                    <h3 class="font-serif text-xl font-bold text-white group-hover:text-primary transition-colors mt-1">Mente Infinita</h3>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="mt-auto border-t border-primary/20 bg-background-dark py-12 px-4">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary text-2xl">account_balance</span>
+                    <span class="font-serif text-lg font-bold tracking-widest uppercase">Museo Virtual</span>
+                </div>
+                <p class="text-slate-500 text-sm">© 2024 Museo Virtual de Arte Contemporáneo. Todos los derechos
+                    reservados.</p>
+            </div>
+            <div class="flex gap-6">
+                <a class="text-slate-400 hover:text-primary transition-colors" href="#">Facebook</a>
+                <a class="text-slate-400 hover:text-primary transition-colors" href="#">Instagram</a>
+                <a class="text-slate-400 hover:text-primary transition-colors" href="#">Twitter</a>
+                <a class="text-slate-400 hover:text-primary transition-colors" href="#">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Mobile Bottom Navigation -->
+    <div
+        class="md:hidden fixed bottom-0 left-0 right-0 bg-background-dark/95 border-t border-primary/20 backdrop-blur-lg z-50 flex justify-around p-3">
+        <a class="flex flex-col items-center text-primary" href="#">
+            <span class="material-symbols-outlined">home</span>
+            <span class="text-[10px] font-bold uppercase mt-1">Inicio</span>
+        </a>
+        <a class="flex flex-col items-center text-slate-500" href="#">
+            <span class="material-symbols-outlined">palette</span>
+            <span class="text-[10px] font-bold uppercase mt-1">Obras</span>
+        </a>
+        <a class="flex flex-col items-center text-slate-500" href="#">
+            <span class="material-symbols-outlined">event</span>
+            <span class="text-[10px] font-bold uppercase mt-1">Expos</span>
+        </a>
+        <a class="flex flex-col items-center text-slate-500" href="artistas.html">
+            <span class="material-symbols-outlined">group</span>
+            <span class="text-[10px] font-bold uppercase mt-1">Artistas</span>
+        </a>
+    </div>
+</body>
+
+</html>
